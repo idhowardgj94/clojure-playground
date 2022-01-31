@@ -1,3 +1,4 @@
 {:lint-as {rum.core/defcs clojure.core/def
-           rum.core/defc clojure.core/def}
+           rum.core/defc clojure.core/def
+           spade.core/defclass clojure.core/def}
  :linters {:unresolved-symbol {:exclude [(rum.core/defcs)]}}}

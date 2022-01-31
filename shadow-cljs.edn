@@ -5,7 +5,7 @@
  :source-paths ["src"]
  :builds {:app {:target :browser
                 :modules {:main {:entries [resume.index]
-                                 :init-fn resume.browser/init}}
+                                 :init-fn dev.browser/init}}
                 :asset-path "/js"
                 :output-dir "public/js"
                 #_#_:devtools {:watch-dir "resources/public"}}}

@@ -17,7 +17,7 @@
   (println "Start shadow-cljs develop server...")
   (server/start!)
   (api/watch :app)
-  (.addShutdownHook Runtime/getRuntime (Thread. #(do
+  (.addShutdownHook (Runtime/getRuntime) (Thread. #(do
                                                    (println "stop server...")
                                                    (server/stop!)
                                                    (println "bye.")))))

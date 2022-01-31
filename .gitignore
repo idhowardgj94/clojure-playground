@@ -17,3 +17,4 @@ node_modules/
 pubilc/js/*
 .shadow-cljs
 .calva/
+public/js/

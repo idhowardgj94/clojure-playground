@@ -7,7 +7,8 @@
                  [rum "0.12.8"]
                  [thheller/shadow-cljs "2.16.12"]
                  [cljsjs/react "18.0.0-rc.0-0"]
-                 [cljsjs/react-dom "18.0.0-rc.0-0"]]
+                 [cljsjs/react-dom "18.0.0-rc.0-0"]
+                 [net.dhleong/spade "1.1.0"]]
   :repl-options {:init-ns resume.core}
   :source-paths ["src" "src/resume"]
   :test-paths ["test" "src"]

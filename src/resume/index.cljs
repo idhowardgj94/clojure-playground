@@ -1,10 +1,9 @@
 (ns resume.index 
-  (:require [rum.core :as rum]))
-
-;(defn log [& args] (apply (.-log js/console) args))
+  (:require [rum.core :as rum]
+            [resume.app :refer [app]]))
 
 (rum/defc index []
-  [:div {:class "label"} "hello, world, hello, howard"])
+  [(app)])
 
 
 (rum/mount (index) js/document.body)

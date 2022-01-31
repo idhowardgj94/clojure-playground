@@ -9,11 +9,16 @@
                  [cljsjs/react "18.0.0-rc.0-0"]
                  [cljsjs/react-dom "18.0.0-rc.0-0"]
                  [net.dhleong/spade "1.1.0"]]
-  :repl-options {:init-ns resume.core}
+  :repl-options {:init-ns dev.main}
+  :plugins [[lein-shell "0.5.0"]]
   :source-paths ["src" "src/resume"]
   :test-paths ["test" "src"]
   :aliases {"shadow-cljs-run" ["run" "-m" "shadow.cljs.devtools.cli"]
-            "dev" ["run" "-m" "shadow.cljs.devtools.cli" "watch" "app"]}
+            "dev" ["run" "-m" "shadow.cljs.devtools.cli" "watch" "app"]
+            "css" ["shell"
+                   "node_modules/.bin/postcss" "src/resume/assets/main.css"
+                   "-o" "public/main.css"
+                   "--config" "src/config/postcss.config.js"]}
   :profiles {:dev {:main dev.main}})
 
 

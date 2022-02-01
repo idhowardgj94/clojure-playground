@@ -5,5 +5,5 @@
 (rum/defc index []
   [(app)])
 
-
-(rum/mount (index) js/document.body)
+(def root (.querySelector js/document "#root"))
+(rum/mount (index) root)

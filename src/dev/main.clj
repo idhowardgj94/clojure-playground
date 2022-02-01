@@ -6,15 +6,12 @@
 (defn watch-css
   ;; build and watch css.
   []
-  (let [{:keys [out err]} (apply shell/sh ["node_modules/.bin/postcss" "src/resume/assets/main.css"
-                                           "-o" "public/main.css"
-                                           "--config" "src/config/postcss.config.js"])]
-    (println "finish build")
-    (when (not out)
-      (println (str "[INFO] " out)))
-    (when (not err)
-      println (str "[ERROR] " err))))
+  (future (apply shell/sh ["node_modules/.bin/postcss" "--watch" "src/resume/assets/main.css"
+                           "-o" "public/main.css"
+                           "--config" "src/config/postcss.config.js"]))
+    (println "[INFO] watch css......"))
 
+(watch-css)
 (defn start-server!
   []
   (server/start!))
@@ -40,3 +37,4 @@
                                                      (println "stop server...")
                                                      (stop-watch!)
                                                      (println "bye.")))))
+(-main)

@@ -22,7 +22,7 @@
   */
  @import "tailwindcss/utilities";
  
- @import "shards-ui/dist/css/shards.min.css"
+ /* @import "shards-ui/dist/css/shards.min.css" */
  /**
   * Here you would add any custom utilities you need that don't come out of the
   * box with Tailwind.

@@ -1,7 +1,8 @@
 (ns resume.app
   (:require [rum.core :as rum]
             [resume.style :refer [ship-style]]
-            [shards-react :as ui]))
+            [shards-react :as ui]
+            [resume.component.splash :refer [splash]]))
 
 (rum/defc Button []
   [:div
@@ -13,6 +14,7 @@
   ;; my app root here
   []
   [:div
+   (splash)
    [:h1 (ship-style) "hello, world"]
    [:h2 (str "ok" "let's find out the state management method.")]
    [:p (str "I think it's something relate to atom, right")]

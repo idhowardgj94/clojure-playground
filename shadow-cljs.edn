@@ -1,7 +1,7 @@
 ;; shadow-cljs configuration
 {:lein true
   :nrepl {:port 9000}
- :socket-repl false
+ :socket-repl true
  :source-paths ["src"]
  :builds {:app {:target :browser
                 :modules {:main {:entries [resume.index]
@@ -10,4 +10,4 @@
                 :output-dir "public/js"
                 #_#_:devtools {:watch-dir "resources/public"}}}
  :dev-http
- {8020 "public"}}
+ {8000 "public"}}

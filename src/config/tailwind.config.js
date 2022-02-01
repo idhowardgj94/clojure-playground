@@ -3,6 +3,9 @@ module.exports = {
     extend: {
     },
   },
+  content: [
+    './src/**/*.{html,js,cljs}',
+  ],
   variants: {
     accessibility: [],
     alignContent: [],

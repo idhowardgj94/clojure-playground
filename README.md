@@ -3,8 +3,10 @@
 A Clojure library designed to ... well, that part is up to you.
 
 ## Usage
-
-FIXME
+start dev:
+```shell
+lein pdo css, run
+```
 
 ## License
 

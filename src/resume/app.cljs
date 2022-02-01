@@ -15,9 +15,12 @@
   []
   [:div
    (splash)
-   [:h1 (ship-style) "hello, world"]
-   [:h2 (str "ok" "let's find out the state management method.")]
-   [:p (str "I think it's something relate to atom, right")]
+   [:h1.text-5xl.m-4 "About me"]
+   [:p.m-2 (str "I'm Howard. Software progarmmer from Taiwan.")]
+   [:p.m-2 (str "I love learn new tech and different programming skill.")] 
+   [:p.m-2 (str "#object-originted-programming #functional-programming"
+                "#react #java #golang #rust"
+                "#keep_learning_new_thing")]
    [:button {:on-click #(do (js/console.log "hi, howard")
                             (swap! counter inc))} "click me"]
    (Button)
